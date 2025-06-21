@@ -4,13 +4,15 @@ phases:
   install:
     runtime-versions:
       nodejs: 18
-  commands:
-    - npm install -g @angular/cli
-    - npm install
-build:
-  commands: -ng build --configuration production
+    commands:
+      - npm install -g @angular/cli
+      - npm install
+
+  build:
+    commands:
+      - ng build --configuration production
 
 artifacts:
-files:
-  - "**/*"
-base-directory: dist/demo-angular/browser
+  files:
+    - '**/*'
+  base-directory: dist/demo-angular/browser
